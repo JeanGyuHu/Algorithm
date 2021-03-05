@@ -2,6 +2,7 @@
 
 using namespace std;
 
+int v,e;
 int parents[100001];
 vector<pair<int, pair<int, int> > > edges;
 
@@ -9,7 +10,7 @@ int find_parent(int x){
     if(x==parents[x])
         return x;
     else
-        return parents = find_parent(parents[x]);
+        return parents[x] = find_parent(parents[x]);
 }
 
 int union_node(int a, int b){
@@ -30,12 +31,12 @@ int main(void){
     cin>>v>>e;
 
     for(int i=1; i<=v; i++)
-        parent[i]=i;
+        parents[i]=i;
     
     for(int i=0; i<e; i++){
         int a,b,cost;
 
-        c>>a>>b>>cost;
+        cin>>a>>b>>cost;
 
         edges.push_back(make_pair(cost,make_pair(a, b)));
     }
@@ -48,7 +49,7 @@ int main(void){
         int b = edges[i].second.second;
 
         if(find_parent(a) != find_parent(b)){
-            union_parent(a, b);
+            union_node(a, b);
             result+=cost;
         }
     }

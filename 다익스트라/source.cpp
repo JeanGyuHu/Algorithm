@@ -21,7 +21,7 @@ int getSmallestNode(){
     return idx;
 }
 
-void dijkstra(start){
+void dijkstra(int start){
 
     d[start] = 0;
     visited[start] = true;
