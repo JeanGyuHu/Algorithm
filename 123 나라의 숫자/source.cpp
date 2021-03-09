@@ -6,11 +6,9 @@ string solution(int n) {
     string answer = "";
 
     while(n!=0){
-        
         answer="412"[n%3]+answer;
-        n = n/3 - (n%3==0);
+        n = n/3 - (n%3==0);     //0이 없어 3이 배수 일떄 자릿수가 변하지 않는다.
     }
-
     return answer;
 }
 
