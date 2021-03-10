@@ -16,10 +16,8 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         if(progresses[idx]>=100){
             count=1;
             for(int i=idx+1; i<progresses.size(); i++){
-                cout<<progresses[i]<<' ';
-                if(progresses[i]<100){
+                if(progresses[i]<100)
                     break;
-                }
                 else count++;
             }
             answer.push_back(count);
