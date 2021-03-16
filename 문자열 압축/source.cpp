@@ -24,7 +24,7 @@ int solution(string s) {
         if(cnt>1) tmp_str+=to_string(cnt);
         tmp_str+=tmp;
         
-        cout<<'\n'<<tmp_str<<'\n';
+        //cout<<'\n'<<tmp_str<<'\n';
 
         answer = min(answer, (int)tmp_str.size());
     }
