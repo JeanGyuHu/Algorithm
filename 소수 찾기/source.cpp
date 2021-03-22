@@ -8,16 +8,12 @@ bool comp(char s1, char s2){
 
 int solution(string numbers) {
 
-    cout<<"=================\n";
-
     int answer = 0;
     int d[9999999]={0,};
     vector<int> n(10,0);
 
-    cout<<"=================\n";
     sort(numbers.begin(), numbers.end(), comp);
     int max_num =stoi(numbers);
-    cout<<"=================1\n";
 
     for(int i=2; i<=max_num; i++){
         if(!d[i]){
@@ -28,12 +24,10 @@ int solution(string numbers) {
         }
     }
 
-    cout<<"=================2\n";
     for(int i=0; i<numbers.size(); i++)
         n[numbers[i]-'0']++;
 
-    cout<<"=================3\n";
-    for(int i=2; i<max_num; i++){
+    for(int i=2; i<=max_num; i++){
         if(d[i]!=0) continue;
         string tmp=to_string(i);
         
