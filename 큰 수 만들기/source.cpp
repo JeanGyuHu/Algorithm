@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-//4개가 
+/*
 string solution(string number, int k) {
     string answer = "";
     int cur=-1;
@@ -19,6 +18,34 @@ string solution(string number, int k) {
     }
     return answer;
 }
+*/
+string solution(string number, int k) {
+    string answer = "";
+    answer = number.substr(k); 
+    for(int i = k-1;i >=0;i--){
+        int j = 0;
+        do{
+            if(number[i] >= answer[j]){
+                char temp = answer[j];
+                answer[j] = number[i];
+                number[i] = temp;
+                j++;
+            }else{
+                break;
+            }
+        }while(1);
+    }
+
+
+
+    return answer;
+}
+
+/*
+1, 9, 2, 4
+1, 2, 9, 4
+
+*/
 
 int main(void){
 
