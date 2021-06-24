@@ -18,6 +18,5 @@ int main(void){
 
     cout<<solution(100000);    
 
-
     return 0;
 }

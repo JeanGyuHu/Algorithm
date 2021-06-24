@@ -29,7 +29,6 @@ vector<int> solution(string s) {
                 answer[1]++;
         }
         s = trans_binary(tmp);
-        cout<<s<<'\n';
     }
 
     return answer;

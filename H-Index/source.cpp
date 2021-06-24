@@ -12,22 +12,8 @@ int solution(vector<int> citations) {
         int cur = citations[size-i-1];
         if(cur<=i) return i;
     }
-
-    if(i==size) return i;
-    return 0;
+    return size;
 }
-    // for(int i=citations.size()-1; i>=0; i--){
-    //     int cnt=0;
-
-    //     for(int j=0; j<citations.size(); j++){
-    //         if(i<=citations[j])
-    //             cnt++;
-    //     }
-    //     if(cnt>=i  cnt>h_idx){
-    //         h_idx=cnt;
-    //     }
-    // }
-//}
 
 int main(void){
 

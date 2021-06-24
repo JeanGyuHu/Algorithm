@@ -13,7 +13,7 @@ int find_parent(int x){
         return parents[x]=find_parent(parents[x]);
 }
 
-int union_node(int a, int b){
+void union_node(int a, int b){
     
     a=find_parent(a);
     b=find_parent(b);

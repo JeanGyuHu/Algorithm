@@ -3,7 +3,6 @@
 using namespace std;
 
 long long gcd(long long a, long long b){ return b==0? a : gcd(b,a%b); }
-
 long long lcm(long long a, long long b){ return (a / gcd(a,b)) * b; }
 
 int solution(vector<int> arr) {
@@ -11,10 +10,9 @@ int solution(vector<int> arr) {
 
     answer=lcm(arr[0], arr[1]);
 
-    for(int i=2; i<arr.size(); i++){
+    for(int i=2; i<arr.size(); i++)
         answer=lcm(answer, arr[i]);
-    }
-
+    
     return answer;
 }
 

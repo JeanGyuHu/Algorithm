@@ -12,7 +12,6 @@ vector<vector<int> > str_split(string s){
     string tmp;
 
     for(int i=1; i<s.length()-1; i++){
-        cout<<"===============\n";
         if(s[i]=='{' || (s[i]==',' && s[i-1]=='}')){
             continue;
         }
@@ -30,7 +29,6 @@ vector<vector<int> > str_split(string s){
             v2.push_back(stoi(tmp));
             tmp.clear();
         }        
-        cout<<tmp<<'\n';
     }
     
     return v;

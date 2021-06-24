@@ -8,13 +8,12 @@ long long solution(int n, vector<int> works) {
     
     for(int i : works) pq.push(i);
     
-    while(n>0){
+    while(n-->0){
         if(pq.top()>0){
             int cur = pq.top();
             pq.pop();
             pq.push(cur-1);
         }
-        n--;
     }
     
     while(!pq.empty()) {

@@ -22,7 +22,7 @@ bool check_fight(int a, int b){
 
 int solution(int n, int a, int b)
 {
-    int answer = 0;
+    int answer = 1;
 
     while(check_fight(a,b)){
         answer++;
